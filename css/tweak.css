@@ -1,0 +1,107 @@
+#intro h2 {
+	font-family: 'Great Vibes', cursive;
+	/*font-size: 6em;*/
+	font-weight: 400;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color: #FFFFFF;
+}
+
+a {
+	color: #0069d9;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+a:focus, a:hover {
+	color: #007bff;
+	text-decoration: none;
+}
+
+footer {
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 30px;
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+}
+
+#main-logo {
+	position: absolute;
+	z-index: 12;
+	width: 100px;
+	left: 50%;
+	top: 20px;
+	transform: translate(-50%);
+}
+
+button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
+	background-color: #FFFFFF !important;
+	color: #000000;
+}
+
+#welcome{
+	z-index: 13;
+	display: flex;
+	min-height: 100vh;
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+#welcome-container{
+	margin: auto;
+}
+
+#welcome img {
+	width: 200px;
+}
+
+.guest-hi {
+	font-family: 'Yellowtail', cursive;
+}
+
+#guest-name {
+	font-family: "Times New Roman", sans-serif;
+}
+
+.guest {
+	font-size: 5em;
+}
+
+.inv-msg {
+	font-size: 1.5em;
+}
+
+.btm-msg {
+	margin-bottom: 50px;
+}
+
+.wait-container {
+	height: 20px;
+}
+
+@media (max-width: 768px ) {
+  	#welcome img {
+		width: 150px;
+	}
+
+	.btm-msg {
+		margin-bottom: 40px;
+	}
+
+	.guest-hi {
+		font-family: 'Yellowtail', cursive;
+	}
+
+	.guest {
+		font-size: 2.5em;
+	}
+
+	.inv-msg {
+		font-size: 1em;
+	}
+}
