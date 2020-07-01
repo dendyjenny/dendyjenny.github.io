@@ -48,7 +48,8 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	z-index: 13;
 	display: flex;
 	min-height: 100vh;
-	background-color: #FFFFFF;
+	background-color: #000000;
+	color: #FFFFFF;
 	position: relative;
 }
 
