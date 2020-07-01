@@ -106,3 +106,16 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 		font-size: 1em;
 	}
 }
+
+.btn-rsvp {
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 6px 50px;
+	border: none;
+	border-radius: 3px;
+}
+
+.btn-rsvp:hover {
+	color: #FFFFFF;
+	background-color: #141414;
+}
