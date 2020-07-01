@@ -429,9 +429,9 @@
     <script type="text/javascript">
         url = window.location.href;
         arrUrl = url.split('?');
+        $('#guest-name').html(arrUrl[1]);
         $(document).ready(function() {
             $('#welcome').fadeIn('slow', function(){
-                $('#guest-name').html(arrUrl[1]);
                 setInterval(function(){
                     $('.wait-msg').fadeToggle('fast');
                 },500);
