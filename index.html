@@ -429,15 +429,17 @@
     <script type="text/javascript">
         url = window.location.href;
         arrUrl = url.split('?');
-        $('#guest-name').html(arrUrl[1]);
-        setInterval(function(){
-            $('.wait-msg').fadeToggle('fast');
-        },500);
         $(document).ready(function() {
-            setTimeout(function(){
-                $('#welcome').html('').fadeOut('slow');
-                $('body').removeAttr('style');
-            },5000);
+            $('#welcome').fadeIn('slow', function(){
+                $('#guest-name').html(arrUrl[1]);
+                setInterval(function(){
+                    $('.wait-msg').fadeToggle('fast');
+                },500);
+                setTimeout(function(){
+                    $('#welcome').html('').fadeOut('slow');
+                    $('body').removeAttr('style');
+                },5000);
+            });
         });
     </script>
 </body>
