@@ -119,3 +119,12 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	color: #FFFFFF;
 	background-color: #141414;
 }
+
+.progress {
+	border-radius: 0;
+	height: 2px;
+}
+
+.progress-bar {
+	background-color: #141414;
+}
