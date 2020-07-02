@@ -421,7 +421,7 @@
         $(document).ready(function() {
             url = window.location.href;
             arrUrl = url.split('?');
-            $('#guest-name').html(arrUrl[1]);
+            $('#guest-name').html(arrUrl[1].replace(/%20/g,' '));
             total = $('img').length + 1;
             bar = 100/total;
             count = 0;
