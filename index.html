@@ -30,10 +30,14 @@
                 <span class="guest-hi">Hi, </span><span id="guest-name"></span>
             </div>
             <div class="inv-msg" style="margin-bottom: 20px;">
-                WE INVITE YOU TO OUR WEDDING RECEPTION
+                <span class="inv-msg-content">
+                    WE INVITE YOU TO OUR WEDDING RECEPTION
+                </span>
             </div>
-            <div class="progress" style="margin-bottom: 20px;">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-container">
+                <div class="progress" style="margin-bottom: 20px;">
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
             <div style="height: 2em;">
                 <i class="fa fa-circle-o-notch fa-spin" style="display: none;"></i>
@@ -437,7 +441,13 @@
             $('.progress-bar').attr('style','width: '+(totalBar)+'%;');
             loadSeq(totalBar+bar);
         }
+        function barSize(){
+            $('.progress-container').width($('.inv-msg-content').innerWidth());
+        }
         $(document).ready(function() {
+            var barSizeCheck = setInterval(function(){
+                barSize();
+            },250);
             url = window.location.href;
             arrUrl = url.split('?');
             if(arrUrl[1]){
@@ -458,6 +468,7 @@
                 }
             });
             $(window).load(function(){
+                clearInterval(barSizeCheck);
                 count++;
                 loadFull();
                 setTimeout(function(){

@@ -71,6 +71,10 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 
 .guest {
 	font-size: 5em;
+	line-height: normal; 
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .inv-msg {
@@ -91,7 +95,7 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	}
 
 	.btm-msg {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 	.guest-hi {
@@ -99,7 +103,7 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	}
 
 	.guest {
-		font-size: 2.5em;
+		font-size: 2em;
 	}
 
 	.inv-msg {
@@ -129,4 +133,9 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 .progress-bar {
 	/* background-color: #141414; */
 	background-color: #FFFFFF;
+}
+
+.progress-container {
+	margin-left: auto;
+    margin-right: auto;
 }
