@@ -418,6 +418,25 @@
         }
     </script>
     <script type="text/javascript">
+        var bar, total;
+        var totalBar = 0;
+        var count = 0;
+        var loadInt;
+        function loadSeq(to){
+            loadInt = setInterval(function(){
+                if(totalBar+1 > to || totalBar >= 100){
+                    clearInterval(loadInt);
+                } else {
+                    $('.progress-bar').attr('style','width: '+(totalBar+=1)+'%;');
+                }
+            }, 1000);
+        }
+        function loadFull(){
+            clearInterval(loadInt);
+            totalBar = bar * count;
+            $('.progress-bar').attr('style','width: '+(totalBar)+'%;');
+            loadSeq(totalBar+bar);
+        }
         $(document).ready(function() {
             url = window.location.href;
             arrUrl = url.split('?');
@@ -426,19 +445,20 @@
             }
             total = $('img').length + 1;
             bar = 100/total;
-            count = 0;
-            totalBar = 0;
             $('img').each(function(index, el){
                 if(this.complete){
-                    $('.progress-bar').attr('style','width: '+(totalBar+=bar)+'%;');
+                    count++;
+                    loadFull();
                 } else {
                     $(this).load(function(){
-                        $('.progress-bar').attr('style','width: '+(totalBar+=bar)+'%;');
+                        count++;
+                        loadFull();
                     });
                 }
             });
             $(window).load(function(){
-                $('.progress-bar').attr('style','width: '+(totalBar+=bar)+'%;');
+                count++;
+                loadFull();
                 setTimeout(function(){
                     $('#welcome').find('i').fadeIn(400);
                     setTimeout(function(){
