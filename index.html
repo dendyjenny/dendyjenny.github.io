@@ -423,6 +423,7 @@
         var count = 0;
         var loadInt;
         function loadSeq(to){
+            console.log(to);
             loadInt = setInterval(function(){
                 if(totalBar+1 > to || totalBar >= 100 || count == total-1){
                     clearInterval(loadInt);
