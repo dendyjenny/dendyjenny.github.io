@@ -445,6 +445,7 @@
             }
             total = $('img').length + 1;
             bar = 100/total;
+            loadSeq(bar);
             $('img').each(function(index, el){
                 if(this.complete){
                     count++;
