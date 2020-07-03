@@ -437,16 +437,15 @@
             $('.progress-bar').attr('style','width: '+(totalBar)+'%;');
             loadSeq(totalBar+bar);
         }
-        total = $('img').length + 1;
-        console.log(total);
-        bar = 100/total;
-        loadSeq(bar);
         $(document).ready(function() {
             url = window.location.href;
             arrUrl = url.split('?');
             if(arrUrl[1]){
                 $('#guest-name').html(arrUrl[1].replace(/%20/g,' '));
             }
+            total = $('img').length + 1;
+            bar = 100/total;
+            loadSeq(bar);
             $('img').each(function(index, el){
                 if(this.complete){
                     count++;
