@@ -424,7 +424,7 @@
         var loadInt;
         function loadSeq(to){
             loadInt = setInterval(function(){
-                if(totalBar+1 > to || totalBar >= 100){
+                if(totalBar+1 > to || totalBar >= 100 || count == total-1){
                     clearInterval(loadInt);
                 } else {
                     $('.progress-bar').attr('style','width: '+(totalBar+=1)+'%;');
