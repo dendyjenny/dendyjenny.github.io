@@ -421,7 +421,6 @@
         $(document).ready(function() {
             url = window.location.href;
             arrUrl = url.split('?');
-            console.log(arrUrl[1]);
             if(arrUrl[1]){
                 $('#guest-name').html(arrUrl[1].replace(/%20/g,' '));
             }
