@@ -26,16 +26,16 @@
     <div id="welcome">
         <div id="welcome-container">
             <img src="media/logo.png" class="btm-msg welcome-img">
-            <div class="guest btm-msg">
+            <div class="guest">
                 <span class="guest-hi">Hi, </span><span id="guest-name"></span>
             </div>
-            <div class="inv-msg" style="margin-bottom: 20px;">
+            <div class="inv-msg">
                 <span class="inv-msg-content">
                     WE INVITE YOU TO OUR WEDDING RECEPTION
                 </span>
             </div>
             <div class="progress-container">
-                <div class="progress" style="margin-bottom: 20px;">
+                <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
@@ -47,6 +47,9 @@
     <!-- /welcome screen -->
     <div id="main-content">
         <img src="media/logo-putih.png" id="main-logo">
+        <!-- <a href="#" class="btn-get-started" onclick="$('.navbar-toggle').click()"> -->
+            <img src="media/logo-burger.png" id="main-menu">
+        <!-- </a> -->
         <!-- navigation -->
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -62,11 +65,11 @@
                 </div>
                 <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="current"><a href="#intro">Wedding</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Countdown</a></li>
+                        <li class="current"><a href="#intro">Intro</a></li>
+                        <li><a href="#wedding-of">Wedding</a></li>
+                        <li><a href="#about">Invitation</a></li>
+                        <!-- <li><a href="#services">Countdown</a></li> -->
                         <li><a href="#portfolio">Gallery</a></li>
-                        <li><a href="#contact">Attendance</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,78 +77,90 @@
         <!-- /navigation -->
 
         <!-- intro -->
-        <section id="intro">
-            <div class="intro-container">
-                <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <!-- Slide 1 -->
-                        <div class="item active" style="background-position: center;">
-                            <div class="carousel-background"><img src="media/pedot1.jpeg" alt=""></div>
-                            <div class="carousel-container">
-                                <div class="carousel-content" style="padding-top: 50px;">
-                                    <h2 class="animated fadeInDown">Dendy & Jenny</h2>
-                                    <p class="animated fadeInUp">Thursday, 9th July 2020</p>
-                                    <a href="#about" class="btn-get-started animated fadeInUp">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="item" style="background-position: center;">
-                            <div class="carousel-background"><img src="media/pedot2.jpeg" alt=""></div>
-                            <div class="carousel-container">
-                                <div class="carousel-content" style="padding-top: 50px;">
-                                    <h2 class="animated fadeInDown">Dendy & Jenny</h2>
-                                    <p class="animated fadeInUp">Are getting married</p>
-                                    <a href="#about" class="btn-get-started animated fadeInUp">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="item" style="background-position: center;">
-                            <div class="carousel-background"><img src="media/pedot3.jpeg" alt=""></div>
-                            <div class="carousel-container">
-                                <div class="carousel-content" style="padding-top: 50px;">
-                                    <h2 class="animated fadeInDown">Dendy & Jenny</h2>
-                                    <p class="animated fadeInUp">Jl. Merpati, No. 3, Singaraja</p>
-                                    <a href="#about" class="btn-get-started animated fadeInUp">Details</a>
-                                </div>
+        <section id="intro" class="carousel-intro">
+            <div class="intro-desktop">
+                <div class="intro-container">
+                    <div id="introCarouselDesktop" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Slide 1 -->
+                            <div class="item active" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide-desktop.jpg" alt=""></div>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon fa fa-angle-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon fa fa-angle-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                </div>
+            </div>
+            <div class="intro-mobile">
+                <div class="intro-container">
+                    <div id="introCarouselMobile" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#introCarouselMobile" data-slide-to="0" class="active"></li>
+                            <li data-target="#introCarouselMobile" data-slide-to="1"></li>
+                            <li data-target="#introCarouselMobile" data-slide-to="2"></li>
+                            <li data-target="#introCarouselMobile" data-slide-to="3"></li>
+                            <li data-target="#introCarouselMobile" data-slide-to="4"></li>
+                            <li data-target="#introCarouselMobile" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Slide 1 -->
+                            <div class="item active" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide1.jpg" alt=""></div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="item" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide2.jpg" alt=""></div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="item" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide3.jpg" alt=""></div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="item" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide4.jpg" alt=""></div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="item" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide5.jpg" alt=""></div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="item" style="background-position: center;">
+                                <div class="carousel-background"><img src="media/slide6.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#introCarouselMobile" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon fa fa-angle-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#introCarouselMobile" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon fa fa-angle-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- /intro -->
 
+        <!-- the wedding of -->
+        <section id="wedding-of" class="home-section section-wedding">
+            <img src="media/nama.jpg" width="100%">
+            <div class="wedding-of-msg">
+                <div class="wedding-of-msg-1">THE WEDDING OF</div>
+                <div class="wedding-of-msg-2">DENDY & JENNY</div>
+            </div>
+        </section>
+        <!-- /the wedding of -->
+
         <!-- about -->
-        <section id="about" class="home-section bg-white">
-            <div class="container">
+        <section id="about" class="home-section text-white" >
+            <div class="container" style="padding-top: 10px;">
                 <div class="row">
-                    <div class="section-heading">
+                    <div class="section-heading d-none">
                         <h2>About us</h2>
                         <div class="heading-line"></div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="box-team wow bounceInUp" data-wow-delay="0.1s">
-                            <img src="media/dendy.jpg" alt="" class="img-circle img-responsive" />
-                            <h4>Kd Ngr Dendy Dharma Putra, S.E.</h4>
-                            <p>Anak kedua dari Gede Merta Putra &amp; Ni Luh Anggreni, S.Pd.SD.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.3s">
-                        <div class="box-team wow bounceInUp">
-                            <img src="media/jenny.jpg" alt="" class="img-circle img-responsive" />
-                            <h4>Putu Ayu Geriani, S.E.</h4>
-                            <p>Anak pertama dari Gede Pahang Wipayana &amp; Maria Pai Weking</p>
-                        </div>
+                    <div class="col-xs-12 text-bold undang-text">
+                        Om Swastiastu,<br><br>Merupakan suatu kehormatan bagi kami <br> Mengundang saudara - saudari untuk hadir dalam acara <br> resepsi pernikahan kami pada :
                     </div>
                     <!-- <div class="col-md-offset-2 col-md-8">
                         <div class="section-heading">
@@ -158,13 +173,13 @@
         <!-- /about -->
 
         <!-- widget -->
-        <section id="" class="home-section bg-white">
+        <section id="" class="home-section text-white" style="padding-top: 0;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="contact-widget wow bounceInLeft">
-                            <i class="fa fa-home fa-4x"></i>
-                            <h5>Venue</h5>
+                            <i class="fa fa-home fa-4x text-white"></i>
+                            <h5 class="text-white">Venue</h5>
                             <p>
                                 Jl. Merpati, No. 3, Singaraja
                             </p>
@@ -172,8 +187,8 @@
                     </div>
                     <div class="col-md-4">
                         <div class="contact-widget wow bounceInUp">
-                            <i class="fa fa-calendar fa-4x"></i>
-                            <h5>Date</h5>
+                            <i class="fa fa-calendar fa-4x text-white"></i>
+                            <h5 class="text-white">Date</h5>
                             <p>
                                 Thursday, 9th July 2020
                             </p>
@@ -181,8 +196,8 @@
                     </div>
                     <div class="col-md-4">
                         <div class="contact-widget wow bounceInRight">
-                        <i class="fa fa-clock-o fa-4x"></i>
-                        <h5>Time</h5>
+                        <i class="fa fa-clock-o fa-4x text-white"></i>
+                        <h5 class="text-white">Time</h5>
                         <p>
                             15:00 WITA - End
                         </p>
@@ -196,7 +211,7 @@
                             </head>
                             <body>
                                 <!-- Button code -->
-                                <div title="Add to Calendar" class="addeventatc" style="z-index: 3;">
+                                <!-- <div title="Add to Calendar" class="addeventatc" style="z-index: 3;">
                                     Add to Calendar
                                     <span class="start">Thursday, 09 July 2020 15:00</span>
                                     <span class="end">Thursday, 09 July 2020 22:00</span>
@@ -204,11 +219,58 @@
                                     <span class="title">Dendy &amp; Jenny Wedding</span>
                                     <span class="description">Dendy &amp; Jenny Wedding</span>
                                     <span class="location">Jl. Merpati, No. 3, Singaraja</span>
+                                </div> -->
+                                <a role="button" href="https://forms.gle/Vrp4DyUgEU8BVWyi8" target="_blank" class="btn btn-rsvp panimated fadeInUp">RSVP</a>
+                                <div class="text-bold undang-text">
+                                    Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i <br>
+                                    Kami ucapkan terima kasih
+                                </div>
+                                <div class="section-heading">
+                                    <div class="heading-line"></div>
                                 </div>
                             </body>
                         </html>
                     </div>
-                    <div class="col-md-12 content" style="padding:20px;">
+                    <div class="col-md-12 content inner-slide">
+                        <div id="slide-landscape" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#slide-landscape" data-slide-to="0" class="active"></li>
+                                <li data-target="#slide-landscape" data-slide-to="1"></li>
+                                <li data-target="#slide-landscape" data-slide-to="2"></li>
+                                <li data-target="#slide-landscape" data-slide-to="3"></li>
+                                <li data-target="#slide-landscape" data-slide-to="4"></li>
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="media/land1.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="media/land2.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="media/land3.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="media/land4.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="media/land5.jpg">
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <!-- <a class="left carousel-control" href="#slide-landscape" role="button" data-slide="prev">
+                                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#slide-landscape" role="button" data-slide="next">
+                                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a> -->
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12 content" style="padding:20px;">
                         <h5>Map Link :<br><br><a href="" target="_blank">Jl. Merpati, No. 3, Singaraja</h5></a>
                     </div>
 
@@ -218,14 +280,14 @@
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.934176496987!2d115.08296710044449!3d-8.10818514011728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd19a0e4302b4f3%3A0xb098d72b65a49c57!2sJl.%20Merpati%20No.3%2C%20Kp.%20Anyar%2C%20Kec.%20Buleleng%2C%20Kabupaten%20Buleleng%2C%20Bali%2081116!5e0!3m2!1sen!2sid!4v1593512989974!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
         <!-- /widget -->
 
         <!-- services -->
-        <section id="services" class="home-section bg-white">
+        <section id="services" class="home-section text-white">
             <div class="container">
                 <!-- <div class="row">
                     <div class="col-md-offset-2 col-md-8">
@@ -240,11 +302,11 @@
                 </div> -->
                 <!-- countdown -->
                 <div class="container" class="col-lg-6 col-md-6">
-                    <div class="section-heading">
-                        <h2>Countdown</h2>
+                    <div class="section-heading" style="margin-bottom: 0;">
+                        <h2 class="text-white">Countdown</h2>
                         <div class="heading-line"></div>
                     </div>
-                    <div id="countdown"></div>
+                    <div id="countdown" class="text-white"></div>
                 </div>
                 <style>
                     #countdown{
@@ -291,7 +353,7 @@
         </section>
 
         <!-- Parallax 1 -->
-        <section id="" class="home-section parallax" data-stellar-background-ratio="0.5" style="color:#fff;background-size:cover;background-image:url('media/pedot4.jpeg');background-position: center top">
+        <!-- <section id="" class="home-section parallax" data-stellar-background-ratio="0.5" style="color:#fff;background-size:cover;background-image:url('media/pedot4.jpeg');background-position: center top">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -302,15 +364,15 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Works -->
-        <section id="portfolio" class="home-section bg-gray">
+        <section id="portfolio" class="home-section" style="margin-bottom: 20px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8">
                         <div class="section-heading">
-                            <h2>Gallery</h2>
+                            <h2 class="text-white">Gallery</h2>
                             <div class="heading-line"></div>
                             <!-- <iframe width="100%" height="400" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
@@ -319,48 +381,93 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                            <a class="popup-img" target="_blank" href="media/1.jpg">
+                                <img src="media/1.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/2.jpg">
+                                <img src="media/2.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/3.jpg">
+                                <img src="media/3.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/4.jpg">
+                                <img src="media/4.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/5.jpg">
+                                <img src="media/5.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/6.jpg">
+                                <img src="media/6.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/7.jpg">
+                                <img src="media/7.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/8.jpg">
+                                <img src="media/8.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
-                         <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
-                            <a class="popup-img" href="media/pedot1.jpeg">
-                                <img src="media/pedot1.jpeg" width="100%" height="auto" alt="img">
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/9.jpg">
+                                <img src="media/9.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/10.jpg">
+                                <img src="media/10.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/11.jpg">
+                                <img src="media/11.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/12.jpg">
+                                <img src="media/12.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/13.jpg">
+                                <img src="media/13.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/14.jpg">
+                                <img src="media/14.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/15.jpg">
+                                <img src="media/15.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/16.jpg">
+                                <img src="media/16.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/17.jpg">
+                                <img src="media/17.jpg" width="100%" height="auto" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign" style="margin-top:20px;">
+                            <a class="popup-img" target="_blank" href="media/18.jpg">
+                                <img src="media/18.jpg" width="100%" height="auto" alt="img">
                             </a>
                         </div>
                     </div>
@@ -369,7 +476,7 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="home-section bg-gray">
+        <!-- <section id="contact" class="home-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8">
@@ -384,7 +491,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Footer -->
         <footer>
@@ -444,10 +551,25 @@
         function barSize(){
             $('.progress-container').width($('.inv-msg-content').innerWidth());
         }
+        function displayIntro(){
+            if($(window).width() > 768){
+                $('.intro-desktop').show();
+                $('.intro-mobile').hide();
+            } else {
+                $('.intro-mobile').show();
+                $('.intro-desktop').hide();
+            }
+        }
         $(document).ready(function() {
+            window.scrollTo(0,0);
+            barSize();
+            displayIntro();
             var barSizeCheck = setInterval(function(){
                 barSize();
             },250);
+            $(window).resize(function () { 
+                displayIntro();
+            });
             url = window.location.href;
             arrUrl = url.split('?');
             if(arrUrl[1]){
@@ -468,7 +590,6 @@
                 }
             });
             $(window).load(function(){
-                clearInterval(barSizeCheck);
                 count++;
                 loadFull();
                 setTimeout(function(){
@@ -476,8 +597,23 @@
                     setTimeout(function(){
                         $('#welcome').html('').fadeOut('slow');
                         $('body').removeAttr('style');
-                    },5000);
+                    },1);
                 },1000);
+            });
+            $('#main-menu').click(function (e) { 
+                e.preventDefault();
+                window.scrollTo(0,0);
+                setTimeout(function(){
+                    $('.navbar-default').css('display', 'block');
+                    $('.navbar-default').addClass('fixed-to-top');
+                    $('.navbar-toggle').click();
+                },100);
+            });
+            $('.navbar-toggle').click(function (e) { 
+                e.preventDefault();
+                if(window.scrollY <= 200 && $('.navbar-collapse').hasClass('in')){
+                    $('.navbar-default').removeClass('fixed-to-top');
+                }
             });
         });
     </script>

@@ -54,12 +54,22 @@
   });
 
   // Intro carousel
-  var introCarousel = $("#introCarousel");
-  var introCarouselIndicators = $("#intro-carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".item").each(function(index) {
+  var introCarouselDesktop = $("#introCarouselDesktop");
+  var introCarouselDesktopIndicators = $("#intro-carousel-indicators");
+  introCarouselDesktop.find(".carousel-inner").children(".item").each(function(index) {
     (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+    introCarouselDesktopIndicators.append("<li data-target='#introCarouselDesktop' data-slide-to='" + index + "' class='active'></li>") :
+    introCarouselDesktopIndicators.append("<li data-target='#introCarouselDesktop' data-slide-to='" + index + "'></li>");
+
+    $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') +"')");
+    $(this).children('.carousel-background').remove();
+  });
+  var introCarouselMobile = $("#introCarouselMobile");
+  var introCarouselMobileIndicators = $("#intro-carousel-indicators");
+  introCarouselMobile.find(".carousel-inner").children(".item").each(function(index) {
+    (index === 0) ?
+    introCarouselMobileIndicators.append("<li data-target='#introCarouselMobile' data-slide-to='" + index + "' class='active'></li>") :
+    introCarouselMobileIndicators.append("<li data-target='#introCarouselMobile' data-slide-to='" + index + "'></li>");
 
     $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') +"')");
     $(this).children('.carousel-background').remove();

@@ -1,3 +1,23 @@
+.d-none {
+	display: none;
+}
+
+.v-hidden {
+	visibility: hidden;
+}
+
+#main-content {
+	background-color: #303030;
+}
+
+.text-white {
+	color: #FFFFFF !important;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
 #intro h2 {
 	font-family: 'Great Vibes', cursive;
 	/*font-size: 6em;*/
@@ -30,13 +50,59 @@ footer {
 	font-size: 2em;
 }
 
+.carousel .fa {
+	color: #615d5a;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 2px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #615d5a;
+    border: none;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+	width: 5px;
+	height: 5px;
+	margin: 2px;
+	background-color: #fff;
+}
+
 #main-logo {
 	position: absolute;
 	z-index: 12;
-	width: 100px;
-	left: 50%;
-	top: 20px;
-	transform: translate(-50%);
+	width: 7%;
+	left: 30px;
+	top: 40px;
+}
+
+#main-menu {
+	display: none;
+}
+
+@media (max-width: 768px ) {
+	#main-logo {
+		position: absolute;
+		z-index: 12;
+		width: 15%;
+		left: 50%;
+		top: 40px;
+		transform: translate(-50%);
+	}
+
+	#main-menu {
+		position: absolute;
+		z-index: 12;
+		width: 15%;
+		left: 30px;
+		top: 40px;
+		display: block;
+	}
 }
 
 button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
@@ -58,7 +124,7 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 }
 
 #welcome img {
-	width: 200px;
+	width: 10%;
 }
 
 .guest-hi {
@@ -75,14 +141,17 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	max-width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
 }
 
 .inv-msg {
-	font-size: 1.5em;
+	font-size: 1em;
+	margin-bottom: 10px;
 }
 
 .btm-msg {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .wait-container {
@@ -91,11 +160,11 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 
 @media (max-width: 768px ) {
   	#welcome img {
-		width: 150px;
+		width: 15%;
 	}
 
 	.btm-msg {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
 	.guest-hi {
@@ -103,31 +172,35 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	}
 
 	.guest {
-		font-size: 2em;
+		font-size: 2.3em;
 	}
 
 	.inv-msg {
-		font-size: 1em;
+		font-size: 0.5em;
+		margin-bottom: 5px;
 	}
 }
 
 .btn-rsvp {
-	background-color: #000000;
+	background-color: none;
 	color: #FFFFFF;
+	font-weight: normal;
 	padding: 6px 50px;
-	border: none;
-	border-radius: 3px;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	margin-bottom: 30px;
 }
 
 .btn-rsvp:hover {
-	color: #FFFFFF;
-	background-color: #141414;
+	color: #000000;
+	background-color: #FFFFFF;
 }
 
 .progress {
 	border-radius: 0;
 	height: 2px;
 	background-color: #000000;
+	margin-bottom: 10px;
 }
 
 .progress-bar {
@@ -138,4 +211,64 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 .progress-container {
 	margin-left: auto;
     margin-right: auto;
+}
+
+.section-wedding {
+	/* background-image: url('../media/nama.jpg');
+	background-size: cover; */
+	padding: 0;
+	position: relative;
+}
+
+.section-heading .heading-line {
+	background: #FFFFFF;
+}
+
+#wedding-of {
+	padding-top: 70px;
+	margin-top: -70px;
+}
+
+/* config */
+
+.wedding-of-msg {
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	text-align: left;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.wedding-of-msg-1 {
+	font-size: 1.5em;
+}
+
+.wedding-of-msg-2 {
+	font-size: 3em;
+}
+
+@media (max-width: 768px ) {
+	.wedding-of-msg {
+		top: 85px;
+		left: 15px;
+	}
+	
+	.wedding-of-msg-1 {
+		font-size: 0.7em;
+	}
+	
+	.wedding-of-msg-2 {
+		font-size: 1.5em;
+	}
+
+	.undang-text {
+		font-size: 0.8em;
+	}
+
+	.inner-slide {
+		padding: 0;
+		margin-right: -20px;
+		margin-left: -20px;
+	}
 }
