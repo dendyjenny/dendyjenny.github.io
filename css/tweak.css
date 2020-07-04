@@ -305,3 +305,40 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 		margin-left: -20px;
 	}
 }
+
+/* Play pause */
+.play-pause {
+	position: fixed;
+	padding: 6px 12px 9px 12px;
+	font-size: 16px;
+	border-radius: 2px;
+	left: 15px;
+	bottom: 15px;
+	z-index:1000;
+  }
+  
+  @media (max-width: 768px) {
+	.play-pause {
+	  bottom: 23px;
+	}
+  }
+  
+  .play-pause:focus {
+	outline: none;
+  }
+
+  .play-pause {
+	background: #000000;
+	color: #fff;
+  }
+  
+  
+  .play-pause:focus {
+	background: #000000;
+	color: #fff;
+  }
+  
+  .play-pause:hover {
+	background: #019090;
+	color: #fff;
+  }
