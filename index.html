@@ -22,6 +22,7 @@
 </head>
 
 <body style="overflow: hidden;">
+    <audio id="myAudio" src="media/music.mp3"></audio>
     <!-- welcome screen -->
     <div id="welcome">
         <div id="welcome-container">
@@ -39,9 +40,9 @@
                     <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-            <div style="height: 2em;">
-                <i class="fa fa-circle-o-notch fa-spin" style="display: none;"></i>
-            </div>
+            <!-- <div style="height: 2em;">
+                <button class="btn btn-enter">ENTER</button>
+            </div> -->
         </div>
     </div>
     <!-- /welcome screen -->
@@ -49,6 +50,7 @@
         <img src="media/logo-putih.png" id="main-logo">
         <!-- <a href="#" class="btn-get-started" onclick="$('.navbar-toggle').click()"> -->
             <img src="media/logo-burger.png" id="main-menu">
+            <img src="media/logo-search.png" id="main-search">
         <!-- </a> -->
         <!-- navigation -->
         <nav class="navbar navbar-default" role="navigation">
@@ -147,6 +149,11 @@
             <div class="wedding-of-msg">
                 <div class="wedding-of-msg-1">THE WEDDING OF</div>
                 <div class="wedding-of-msg-2">DENDY & JENNY</div>
+                <div class="wedding-of-msg-3">
+                    Intimacy transcends the physical. <br>
+                    It is a feeling of closeness that isn't about proximity, but of belonging. <br>
+                    It is a beautiful emotional space in which two become one.
+                </div>
             </div>
         </section>
         <!-- /the wedding of -->
@@ -181,7 +188,9 @@
                             <i class="fa fa-home fa-4x text-white"></i>
                             <h5 class="text-white">Venue</h5>
                             <p>
-                                Jl. Merpati, No. 3, Singaraja
+                                <a href="https://goo.gl/maps/4Cmu5H3uS9LjptGF9" target="_blank" class="link-alamat">
+                                    Jl. Merpati, No. 3, Singaraja
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -590,15 +599,21 @@
                 }
             });
             $(window).load(function(){
+                var x = document.getElementById("myAudio").play();
                 count++;
                 loadFull();
-                setTimeout(function(){
-                    $('#welcome').find('i').fadeIn(400);
-                    setTimeout(function(){
-                        $('#welcome').html('').fadeOut('slow');
-                        $('body').removeAttr('style');
-                    },5000);
-                },1000);
+                // setTimeout(function(){
+                //     $('#welcome').find('i').fadeIn(400);
+                //     setTimeout(function(){
+                //         $('#welcome').html('').fadeOut('slow');
+                //         $('body').removeAttr('style');
+                //     },5000);
+                // },1000);
+                $('.guest').click(function(){
+                    $('#welcome').html('').fadeOut('slow');
+                    $('body').removeAttr('style');
+                    var x = document.getElementById("myAudio").play();
+                });
             });
             $('#main-menu').click(function (e) { 
                 e.preventDefault();

@@ -23,6 +23,9 @@
 
   $(".navbar-collapse a").on('click', function () {
     $(".navbar-collapse.collapse").removeClass('in');
+    if(window.scrollY <= 200){
+        $('.navbar-default').removeClass('fixed-to-top');
+    }
   });
 
   //

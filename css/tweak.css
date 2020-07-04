@@ -81,7 +81,7 @@ footer {
 	top: 40px;
 }
 
-#main-menu {
+#main-menu, #main-search {
 	display: none;
 }
 
@@ -100,6 +100,15 @@ footer {
 		z-index: 12;
 		width: 15%;
 		left: 30px;
+		top: 40px;
+		display: block;
+	}
+
+	#main-search {
+		position: absolute;
+		z-index: 12;
+		width: 15%;
+		right: 30px;
 		top: 40px;
 		display: block;
 	}
@@ -229,6 +238,19 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	margin-top: -70px;
 }
 
+.link-alamat {
+	color: #FFFFFF;
+}
+
+.link-alamat:hover, .link-alamat:focus {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.guest:hover {
+	cursor: pointer;
+}
+
 /* config */
 
 .wedding-of-msg {
@@ -246,6 +268,13 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 
 .wedding-of-msg-2 {
 	font-size: 3em;
+	margin-bottom: 5px;
+}
+
+.wedding-of-msg-3 {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 @media (max-width: 768px ) {
@@ -260,6 +289,10 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	
 	.wedding-of-msg-2 {
 		font-size: 1.5em;
+	}
+	
+	.wedding-of-msg-3 {
+		font-size: 0.6em;
 	}
 
 	.undang-text {
