@@ -506,11 +506,8 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12" style="margin-bottom: 10px;">
-                        Dendy & Jenny
-                    </div>
-                    <div class="col-md-12 ty">
-                        - Thank You -
+                    <div class="col-md-12">
+                        Thank You
                     </div>
                 </div>
             </div>
@@ -553,6 +550,9 @@
                 } else {
                     $('.progress-bar').attr('style','width: '+(totalBar+=1)+'%;');
                 }
+                if(window.scrollY > 0){
+                    window.scrollTo(0,0);
+                }
             }, 1000);
         }
         function loadFull(){
@@ -560,6 +560,9 @@
             totalBar = bar * count;
             $('.progress-bar').attr('style','width: '+(totalBar)+'%;');
             loadSeq(totalBar+bar);
+            if(window.scrollY > 0){
+                window.scrollTo(0,0);
+            }
         }
         function barSize(){
             $('.progress-container').width($('.inv-msg-content').innerWidth());

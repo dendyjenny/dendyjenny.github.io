@@ -46,8 +46,8 @@ footer {
 	background-color: #000000;
 	color: #FFFFFF;
 	padding: 30px;
-	font-family: 'Great Vibes', cursive;
-	font-size: 2em;
+	font-family: 'Times New Roman', sans-serif;
+	font-size: 1.3em;
 }
 
 .carousel .fa {
@@ -322,11 +322,11 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 /* Play pause */
 .play-pause {
 	position: fixed;
-	padding: 6px 12px 9px 12px;
+	padding: 9px 12px;
 	font-size: 16px;
 	border-radius: 2px;
 	left: 15px;
-	bottom: 15px;
+	bottom: 23px;
 	z-index:1000;
   }
   
