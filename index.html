@@ -22,7 +22,7 @@
 </head>
 
 <body style="overflow: hidden;">
-    <audio id="myAudio" src="media/music.mp3"></audio>
+    <audio id="myAudio" src="media/music.mp3" loop></audio>
     <!-- welcome screen -->
     <div id="welcome">
         <div id="welcome-container">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div style="height: 2em;">
-                <i class="fa fa-circle-o-notch fa-spin" style="display: none;"></i>
+                <span class="msg-enter">- Click to Enter -</span>
             </div>
         </div>
     </div>
@@ -149,6 +149,11 @@
             <div class="wedding-of-msg">
                 <div class="wedding-of-msg-1">THE WEDDING OF</div>
                 <div class="wedding-of-msg-2">DENDY & JENNY</div>
+                <div class="wedding-of-msg-3">
+                    Intimacy transcends the physical. <br>
+                    It is a feeling of closeness that isn't about proximity, but of belonging. <br>
+                    It is a beautiful emotional space in which two become one.
+                </div>
             </div>
         </section>
         <!-- /the wedding of -->
@@ -501,15 +506,18 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="margin-bottom: 10px;">
                         Dendy & Jenny
+                    </div>
+                    <div class="col-md-12 ty">
+                        - Thank You -
                     </div>
                 </div>
             </div>
         </footer>
 
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        <a href="#" class="play-pause"><i class="fa fa-play"></i></a>
+        <a href="#" class="play-pause" style="display: none;"><i class="fa fa-stop"></i></a>
     </div>
 
     <!-- js -->
@@ -599,11 +607,11 @@
                 count++;
                 loadFull();
                 setTimeout(function(){
-                    $('#welcome').find('i').fadeIn(400);
-                    setTimeout(function(){
-                        $('#welcome').html('').fadeOut('slow');
-                        $('body').removeAttr('style');
-                    },5000);
+                    $('.msg-enter').fadeIn(400);
+                    // setTimeout(function(){
+                    //     $('#welcome').html('').fadeOut('slow');
+                    //     $('body').removeAttr('style');
+                    // },5000);
                 },1000);
             });
             $('#main-menu').click(function (e) { 
@@ -632,6 +640,13 @@
                 } else {
                     x.play();
                 }
+            });
+            $('#welcome').click(function (e) { 
+                e.preventDefault();
+                $('#welcome').html('').fadeOut('slow');
+                $('body').removeAttr('style');
+                var x = document.getElementById("myAudio").play();
+                $('.play-pause').fadeIn('slow');
             });
         });
     </script>

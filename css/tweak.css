@@ -167,6 +167,19 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	height: 20px;
 }
 
+.msg-enter {
+	display: none;
+}
+
+.msg-enter:hover {
+	cursor: pointer;
+}
+
+.ty {
+	font-family: 'Times New Roman';
+    font-size: 0.5em;
+}
+
 @media (max-width: 768px ) {
   	#welcome img {
 		width: 15%;
@@ -341,4 +354,8 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
   .play-pause:hover {
 	background: #019090;
 	color: #fff;
+  }
+
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+	  width: 100%;
   }
