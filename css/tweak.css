@@ -260,10 +260,6 @@ button.navbar-toggle, button.navbar-toggle:hover, button.navbar-toggle:focus {
 	text-decoration: underline;
 }
 
-.guest:hover {
-	cursor: pointer;
-}
-
 /* config */
 
 .wedding-of-msg {

@@ -543,6 +543,7 @@
         var totalBar = 0;
         var count = 0;
         var loadInt;
+        var loaded = false;
         function loadSeq(to){
             loadInt = setInterval(function(){
                 if(totalBar+1 > to || totalBar >= 100 || count == total-1){
@@ -616,6 +617,7 @@
                     //     $('body').removeAttr('style');
                     // },5000);
                 },1000);
+                loaded = true;
             });
             $('#main-menu').click(function (e) { 
                 e.preventDefault();
@@ -646,10 +648,12 @@
             });
             $('#welcome').click(function (e) { 
                 e.preventDefault();
-                $('#welcome').html('').fadeOut('slow');
-                $('body').removeAttr('style');
-                var x = document.getElementById("myAudio").play();
-                $('.play-pause').fadeIn('slow');
+                if(loaded){
+                    $('#welcome').html('').fadeOut('slow');
+                    $('body').removeAttr('style');
+                    var x = document.getElementById("myAudio").play();
+                    $('.play-pause').fadeIn('slow');
+                }
             });
         });
     </script>
